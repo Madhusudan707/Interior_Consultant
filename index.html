@@ -25,114 +25,207 @@
     <style>
       body {
         font-family: "Poppins", sans-serif;
-        padding: 4% 8%;
-        background-color: #000000;
+        padding: 0;
+        margin: 0;
+        background-color: #0f0f0f;
+      }
+      .container {
+        padding: 2% 8%;
       }
       .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
-       
       }
 
       .brand {
-        border:1px solid #ffffff;
-        padding:0.5%;
-        color:#ffffff;
+        border: 1px solid #ffffff;
+        padding: 0.5%;
+        color: #ffffff;
       }
       .nav-ul {
         width: 40%;
-        
+
         display: flex;
         justify-content: space-between;
       }
+      .mobile-nav {
+        display: none;
+      }
       .nav-ul-items {
         list-style-type: none;
-       
       }
-      .nav-ul-items>a{
-        color:#ffffff;
+      .nav-ul-items > a {
+        color: #ffffff;
       }
 
       section {
         display: flex;
-        margin-top: 3%;
-       
-        
+        margin-top: 7%;
       }
-      .section-left{
+      .section-left {
         width: 40%;
-        font-size:16px;
-        color:#ffffff;
+        font-size: 16px;
+        color: #ffffff;
       }
-      .section-left>a{
-        color:#ffffff;
+      .section-left > a {
+        color: #ffffff;
         text-decoration: none;
       }
 
-      .section-right{
-        margin-left:12%;
+      .section-right {
+        margin-left: 12%;
         position: relative;
       }
       .hero_img {
         width: 800px;
         height: 400px;
       }
-      .card{
+      .card {
         width: 260px;
-        height:120px;
+        height: 120px;
         background-color: #000000;
-        color:white;
-        padding:2%;
-        display:flex;
+        color: white;
+        padding: 2%;
+        display: flex;
         position: absolute;
         flex-direction: column;
-        top:0;
+        top: 0;
         margin-top: 40%;
         right: 40px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+          0 6px 6px rgba(0, 0, 0, 0.23);
       }
-      .card--info{
+      .card--info {
         width: 100%;
-        display:flex;
+        display: flex;
         align-items: center;
-        
-        height: 80px;;
-       
+
+        height: 80px;
       }
-      .card--img{
+      .card--img {
         width: 40px;
-        height:40px;
+        height: 40px;
         border-radius: 50%;
         margin-top: 20%;
-       
-       
       }
-      .card--desc{
+      .card--desc {
         margin-left: 2%;
-    
+
         line-height: 0;
       }
-      .card--desc>h4{
+      .card--desc > h4 {
         font-weight: 500;
       }
-      .card--desc>p{
-        
+      .card--desc > p {
         font-size: 12px;
       }
-      .card--footer{
-        padding:1% 4%;
-        
+      .card--footer {
+        padding: 1% 4%;
+
         font-size: 12px;
         width: 50%;
       }
-      footer{
-       
+      footer {
         width: 100%;
-        
+        display: flex;
+        justify-content: center;
         position: fixed;
-        color:#ffffff;
-        bottom:0;
-        text-align:center
+        color: #ffffff;
+        bottom: 0;
+      }
+      @media screen and (max-width: 441px) {
+        body {
+          padding: 0;
+          margin: 0;
+        }
+
+        .nav-ul {
+          display: none;
+        }
+        .mobile-nav {
+          
+         
+         
+          display: flex;
+         
+        }
+        .mobile-nav > a {
+          text-decoration: none;
+        }
+
+        .mobile-nav-ul {
+          
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background: #f00;
+          width: 100%;
+          line-height: 3;
+          font-size: 24px;
+          list-style-type: none;
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          padding: 0;
+          z-index: 99999;
+          opacity: 0;
+          background-color: #000000;
+          pointer-events: none;
+        }
+        .mobile-nav-ul:target {
+          opacity: 1;
+          pointer-events: auto;
+        }
+        .mobile-nav-ul-items > a {
+          color: #ffffff;
+          text-decoration: none;
+        }
+        #close{
+          position:absolute;
+          top:2%;
+          right:10%;
+          color:#ffffff;
+          pointer-events: auto;
+          border:2px solid red;
+         
+        }
+        .brand {
+          font-size: 20px;
+          padding: 2%;
+        }
+        section {
+          display: flex;
+          flex-direction: column;
+        }
+        .section-left {
+          width: 100%;
+        }
+        .section--left-heading {
+          font-size: 36px;
+        }
+        .section--left-description {
+          width: 100%;
+        }
+        .section-right {
+          margin-left: 0%;
+          margin-top: 10%;
+        }
+        .hero_img {
+          width: 340px;
+          height: 250px;
+        }
+        .card {
+          width: 250px;
+          left: 15%;
+          top: 20%;
+        }
+        footer {
+          display: flex;
+          justify-content: center;
+        }
       }
     </style>
   </head>
@@ -146,35 +239,47 @@
           <li class="nav-ul-items"><a href="#!">About</a></li>
           <li class="nav-ul-items"><a href="#!">Contact</a></li>
         </ul>
+        <div class="mobile-nav">
+          <a href="#menu"><img src='menu.svg' alt='menu'/></a>
+          <div class="mobile-nav-ul" id="menu">
+            <a href="#close" id='close'><img src='close.svg' alt='close'/></a>
+            <ul class="" >
+              <li class="mobile-nav-ul-items"><a href="#!">Home</a></li>
+              <li class="mobile-nav-ul-items"><a href="#!">Collection</a></li>
+              <li class="mobile-nav-ul-items"><a href="#!">About</a></li>
+              <li class="mobile-nav-ul-items"><a href="#!">Contact</a></li>
+            </ul>
+          </div>
+         
+        </div>
       </nav>
       <section>
-        <div class='section-left'>
-          <h1 class='section--left-heading'>Modern interior</h1>
-          <p class='section--left-description'>
+        <div class="section-left">
+          <h1 class="section--left-heading">Modern interior</h1>
+          <p class="section--left-description">
             A full-service residential & commercial interior design and staging
             company offering professional organizing & eco-services.
           </p>
-          <a href="#!" class='section--left-link'>Read more &#8594;</a>
+          <a href="#!" class="section--left-link">Read more &#8594;</a>
         </div>
-        <div class='section-right'>
+        <div class="section-right">
           <img class="hero_img" src="photo1.png" alt="p1" />
           <div class="card">
             <div class="card--info">
               <div>
-                <img src="photo2.png" class='card--img' alt="p2" />
+                <img src="photo2.png" class="card--img" alt="p2" />
               </div>
-             
-              <div class='card--desc'>
+
+              <div class="card--desc">
                 <h4>Aliza Webber</h4>
                 <p>Interior designer</p>
               </div>
-             
             </div>
-            <h4 class='card--footer'>Designed in 2020 by Aliza Webber</h4>
+            <h4 class="card--footer">Designed in 2020 by Aliza Webber</h4>
           </div>
         </div>
       </section>
-      <footer>created by - xdev200</footer>
     </div>
+    <footer>created by - xdev200</footer>
   </body>
 </html>
