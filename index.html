@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,maximum-scale=5"
+    />
+
+    <link rel="icon" href="devchallenges.png" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>THIS INTERIOR</title>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        padding: 4% 8%;
+        background-color: #000000;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+      }
+
+      .brand {
+        border:1px solid #ffffff;
+        padding:0.5%;
+        color:#ffffff;
+      }
+      .nav-ul {
+        width: 40%;
+        
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav-ul-items {
+        list-style-type: none;
+       
+      }
+      .nav-ul-items>a{
+        color:#ffffff;
+      }
+
+      section {
+        display: flex;
+        margin-top: 3%;
+       
+        
+      }
+      .section-left{
+        width: 40%;
+        font-size:16px;
+        color:#ffffff;
+      }
+      .section-left>a{
+        color:#ffffff;
+        text-decoration: none;
+      }
+
+      .section-right{
+        margin-left:12%;
+        position: relative;
+      }
+      .hero_img {
+        width: 800px;
+        height: 400px;
+      }
+      .card{
+        width: 260px;
+        height:120px;
+        background-color: #000000;
+        color:white;
+        padding:2%;
+        display:flex;
+        position: absolute;
+        flex-direction: column;
+        top:0;
+        margin-top: 40%;
+        right: 40px;
+      }
+      .card--info{
+        width: 100%;
+        display:flex;
+        align-items: center;
+        
+        height: 80px;;
+       
+      }
+      .card--img{
+        width: 40px;
+        height:40px;
+        border-radius: 50%;
+        margin-top: 20%;
+       
+       
+      }
+      .card--desc{
+        margin-left: 2%;
+    
+        line-height: 0;
+      }
+      .card--desc>h4{
+        font-weight: 500;
+      }
+      .card--desc>p{
+        
+        font-size: 12px;
+      }
+      .card--footer{
+        padding:1% 4%;
+        
+        font-size: 12px;
+        width: 50%;
+      }
+      footer{
+       
+        width: 100%;
+        
+        position: fixed;
+        color:#ffffff;
+        bottom:0;
+        text-align:center
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="brand">THIS INTERIOR</div>
+        <ul class="nav-ul">
+          <li class="nav-ul-items"><a href="#!">Home</a></li>
+          <li class="nav-ul-items"><a href="#!">Collection</a></li>
+          <li class="nav-ul-items"><a href="#!">About</a></li>
+          <li class="nav-ul-items"><a href="#!">Contact</a></li>
+        </ul>
+      </nav>
+      <section>
+        <div class='section-left'>
+          <h1 class='section--left-heading'>Modern interior</h1>
+          <p class='section--left-description'>
+            A full-service residential & commercial interior design and staging
+            company offering professional organizing & eco-services.
+          </p>
+          <a href="#!" class='section--left-link'>Read more &#8594;</a>
+        </div>
+        <div class='section-right'>
+          <img class="hero_img" src="photo1.png" alt="p1" />
+          <div class="card">
+            <div class="card--info">
+              <div>
+                <img src="photo2.png" class='card--img' alt="p2" />
+              </div>
+             
+              <div class='card--desc'>
+                <h4>Aliza Webber</h4>
+                <p>Interior designer</p>
+              </div>
+             
+            </div>
+            <h4 class='card--footer'>Designed in 2020 by Aliza Webber</h4>
+          </div>
+        </div>
+      </section>
+      <footer>created by - xdev200</footer>
+    </div>
+  </body>
+</html>
